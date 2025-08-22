@@ -1,9 +1,10 @@
 const input = document.querySelector("#input-box");
-const button = document.querySelector("#add-btn");
+const form = document.querySelector("#form");
 const list = document.querySelector("#list-container");
 const span = document.querySelector("span");
 
-button.addEventListener("click", () => {
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
   if (input.value.length === 0) return console.log("Input is empty");
   list.insertAdjacentHTML(
     "beforeend",
